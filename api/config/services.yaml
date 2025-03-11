@@ -1,0 +1,32 @@
+parameters:
+
+services:
+    _defaults:
+        autowire: true
+        autoconfigure: true
+        public: true
+        bind:
+            $mysqlDsn: '%env(DATABASE_DSN)%'
+            $mysqlUsername: '%env(MYSQL_USER)%'
+            $mysqlPassword: '%env(MYSQL_PASSWORD)%'
+
+    App\Application\Command\:
+        resource: '../src/Application/Command'
+
+    App\Application\Query\:
+        resource: '../src/Application/Query'
+
+    App\Application\Service\:
+        resource: '../src/Application/Service'
+
+    App\Infrastructure\:
+        resource: '../src/Infrastructure'
+
+    App\Domain\Service\:
+        resource: '../src/Domain/Service'
+
+    App\Domain\Repository\:
+        resource: '../src/Domain/Repository'
+
+    App\Interface\:
+        resource: '../src/Interface'

@@ -1,0 +1,261 @@
+{
+	"info": {
+		"_postman_id": "ff5bf009-c99e-44c0-861d-54195c487d68",
+		"name": "Company sample",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "7700753"
+	},
+	"item": [
+		{
+			"name": "company",
+			"item": [
+				{
+					"name": "company create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"janoa 2o\",\n    \"taxNumber\": \"7331231212\",\n    \"address\": \"Smutna\",\n    \"city\": \"Warszawa\",\n    \"postcode\": \"01-909\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost/company",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"company"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "company list",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost/company/list",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"company",
+								"list"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "company update",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Nowa nazwa 1\",\n    \"city\": \"Trojmiasto\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost/company/0195810f-e13d-70ed-844a-e032ee127350",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"company",
+								"0195810f-e13d-70ed-844a-e032ee127350"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "company details",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost/company/0195810f-e13d-70ed-844a-e032ee127350",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"company",
+								"0195810f-e13d-70ed-844a-e032ee127350"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "company remove",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Nowa nazwa 1\",\n    \"city\": \"Trojmiasto\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost/company/0195810f-e13d-70ed-844a-e032ee127350",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"company",
+								"0195810f-e13d-70ed-844a-e032ee127350"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "worker",
+			"item": [
+				{
+					"name": "create worker",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"company\": \"01958114-567c-75e9-8c38-1f9dae8af676\",\n    \"firstName\": \"Rubico\",\n    \"lastName\": \"Qubico\",\n    \"email\": \"rubi.qubi@fakemail.com\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost/worker",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"worker"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "list workers",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost/worker/list",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"worker",
+								"list"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "worker update",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"lastName\": \"Inaczej\",\n    \"email\": \"iiini@fakemail.com\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost/worker/01958552-4c66-7148-aec2-26ce2d6def4a",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"worker",
+								"01958552-4c66-7148-aec2-26ce2d6def4a"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "worker details",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost/worker/01958552-4c66-7148-aec2-26ce2d6def4a",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"worker",
+								"01958552-4c66-7148-aec2-26ce2d6def4a"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "worker remove",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost/worker/0195854f-b55f-7e76-b43e-6beee93e5cd6",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"worker",
+								"0195854f-b55f-7e76-b43e-6beee93e5cd6"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "documentation",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost/api/doc.json",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"api",
+						"doc.json"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

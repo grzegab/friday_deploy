@@ -1,0 +1,14 @@
+controllers:
+    resource:
+        path: ../../src/Interface/Controller
+        namespace: App\Interface\Controller
+    type: attribute
+
+kernel:
+    resource: App\Kernel
+    type: attribute
+
+when@dev:
+    _errors:
+        resource: '@FrameworkBundle/Resources/config/routing/errors.xml'
+        prefix: /_error
