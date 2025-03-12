@@ -4,14 +4,14 @@ services:
     ports:
       - "80:80"
     volumes:
-      - ./api:/data/www:rw
+      - ./api:/data/www:consistent
       - ./docker/nginx/default.conf:/etc/nginx/conf.d/default.conf
       
   php-fpm:
     build:
       context: docker/php
     volumes:
-      - ./api:/data/www:rw
+      - ./api:/data/www:consistent
 
   mysql:
     image: mysql:8.0
